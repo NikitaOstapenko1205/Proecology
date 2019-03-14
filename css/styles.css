@@ -3475,6 +3475,11 @@ textarea:focus::-ms-input-placeholder {
 .main .banners {
   margin-bottom: 40px;
 }
+@media (min-width: 767px) {
+  .main .banners .row {
+    display: flex;
+  }
+}
 @media (max-width: 1200px) {
   .main .banners {
     margin-bottom: 30px;
@@ -3491,37 +3496,41 @@ textarea:focus::-ms-input-placeholder {
   }
 }
 .main .banners .banner {
-  padding: 235px 20px 0;
+  padding: 215px 20px 20px;
   position: relative;
   transition: .3s;
-  height: 400px;
+  height: 100%;
   color: #fff;
   display: block;
 }
-@media (max-width: 1200px) and (max-width: 992px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .main .banners .banner {
-    height: 220px;
     background-size: 104px 105px !important;
-    padding: 145px 10px 0;
+    padding: 145px 10px 15px;
   }
 }
-@media (max-width: 1200px) and (max-width: 992px) and (max-width: 767px) and (max-width: 480px) {
+@media (max-width: 767px) and (max-width: 480px) {
   .main .banners .banner {
-    padding: 130px 10px 0;
+    padding: 130px 10px 15px;
   }
 }
 .main .banners .banner-title h2 {
   font-size: 26px;
   text-align: center;
-  line-height: 1.4;
+  line-height: 1.3;
+  margin: 0;
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .main .banners .banner-title h2 {
     font-size: 22px;
-    line-height: 1.3;
   }
 }
-@media (max-width: 992px) and (max-width: 480px) {
+@media (max-width: 1200px) and (max-width: 992px) {
+  .main .banners .banner-title h2 {
+    line-height: 1.2;
+  }
+}
+@media (max-width: 1200px) and (max-width: 992px) and (max-width: 480px) {
   .main .banners .banner-title h2 {
     font-size: 18px;
   }
@@ -3618,6 +3627,14 @@ textarea:focus::-ms-input-placeholder {
 @media (max-width: 992px) {
   .main .client-form h3 {
     margin: -30px auto 20px;
+  }
+}
+@media (max-width: 992px) and (max-width: 560px) {
+  .main .client-form h3 {
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    padding: 15px;
   }
 }
 @media (min-width: 1200px) {
@@ -4205,6 +4222,13 @@ textarea:focus::-ms-input-placeholder {
     padding: 0;
   }
 }
+.main .ovd li b {
+  margin-bottom: 10px;
+  display: block;
+}
+.main .ovd li p {
+  margin: 0 0 10px 10px !important;
+}
 .footer {
   background-color: #001f33;
   box-shadow: none;
@@ -4364,25 +4388,31 @@ textarea:focus::-ms-input-placeholder {
     border-bottom: 2px solid #001f33;
   }
 }
+.above-footer .slick-track {
+  display: flex;
+  align-items: center;
+}
 .above-footer-link {
   display: block;
   position: relative;
   width: 100%;
-  height: 145px;
+  height: auto;
   text-align: center;
   background-color: #fff;
   border: 2px solid #e1e1e1;
   text-transform: uppercase;
   color: #001f33;
   transition: 0;
-  padding: 95px 5px 0;
+  padding: 95px 5px 10px;
   background-repeat: no-repeat;
   background-position: 50% 20%;
+  background-size: auto 70px;
+  word-break: break-word;
 }
 @media (max-width: 767px) {
   .above-footer-link {
     background-position: 50% 15%;
-    padding: 90px 5px 0;
+    padding: 90px 5px 10px;
   }
 }
 .above-footer-link:before {
@@ -4393,15 +4423,18 @@ textarea:focus::-ms-input-placeholder {
   top: 20px;
   transform: translate(-50%, 0);
 }
-.above-footer-link.irpen {
-  background-image: url('../img/irpen.png');
-}
 .above-footer-link.kpi {
   background-image: url('../img/kpi.png');
 }
-.above-footer-link.dynamo {
-  background-image: url('../img/dynamo.png');
+.above-footer-link.eco-center {
+  background-image: url('../img/eco-center.png');
 }
-.above-footer-link.privat {
-  background-image: url('../img/privat.png');
+.above-footer-link.dtek {
+  background-image: url('../img/dtek.png');
+}
+.above-footer-link.delicia {
+  background-image: url('../img/delicia.png');
+}
+.above-footer-link.temp {
+  background-image: url('../img/polution-green.png');
 }
